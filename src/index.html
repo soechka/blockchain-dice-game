@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+    <title>Roll The Dice</title>
+    <!-- Web3.min.js -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="dice-wrapper">
+            <div class="dice-row">
+                <img src='dice-01.svg' id="die-1">
+                <img src='dice-01.svg' id="die-2">
+            </div>
+            <span class="total-value">
+                <p id="total">Just make a bet and roll it</p>
+            </span>
+            <div class="roll">
+                <button class="roll-button" onclick="roll()">ROLL</button>
+            </div> 
+        </div>
+        <div class="bet-wrapper">
+            <div class="bet-switch">
+                <button class="toggle" id="evenB" onclick="toggleEven()">even</button>
+                <button class="toggle" id="oddB" onclick="toggleOdd()">odd</button>
+            </div>
+            <div class="form-field">
+                <input class="form__input" type="bet-amount" placeholder="wei" id="bet" required>
+                <label for="bet" class="form__label">wei</label>
+            </div>
+        </div>
+        <div class="accountData">
+            <p id="accountArea"></p>
+            <p id="accountBalance"></p> 
+            <p id="contractArea"></p>
+        </div>
+    </div>
+    <!--Script-->
+    <script src="script.js"></script>
+</body>
+</html>
